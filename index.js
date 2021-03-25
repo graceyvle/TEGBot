@@ -5,11 +5,21 @@ const client = new discord.Client({ disableMentions: 'everyone' });
 
 const { Player } = require('discord-player');
 
+// Mongo db hier definieren
+const mongoose = require('mongoose')
 client.player = new Player(client);
 client.config = require('./config/bot');
 client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();
+
+
+// Dies ist der Code für die Mongo-DB-Verbindung
+mongoose.connect('mongodb+srv://PatriotZest:techwayempire@techempiregermany.gp4jq.mongodb.net/Data',{
+         useUnifiedTopology : true,
+         useNewUrlParser : true,
+}).then(console.log("Connected to mongo db"));
+
 
 fs.readdirSync('./commands').forEach(dirs => {
     const commands = fs.readdirSync(`./commands/${dirs}`).filter(files => files.endsWith('.js'));
