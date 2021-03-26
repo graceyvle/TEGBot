@@ -34,7 +34,7 @@ module.exports = {
         		.setFooter('Time muted', client.user.displayAvatarURL())
         		.setTimestamp()
                    message.react("✅")
-                   client.channels.cache.get(`824600443718991952`).send(mutembed)
+                   client.channels.cache.get(`824194262279127060`).send(mutembed)
      	         member.send(mutembed);
 
 	setTimeout( function() {
@@ -45,7 +45,7 @@ module.exports = {
        		.addField('User unmuted', member)
         		.addField('Muted by', message.author)
         		.addField('Reason', reason)
-		client.channels.cache.get(`824600443718991952`).send(unmutembed)
+		client.channels.cache.get(`824194262279127060`).send(unmutembed)
           }, ms(time));
 } else{
      return message.channel.send("nothing here");
