@@ -8,7 +8,7 @@ module.exports = {
         if (!args[0]) {
             const infos = message.client.commands.filter(x => x.category == 'Infos').map((x) => '`' + x.name + '`').join(', ');
             const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
-            const infos = message.client.commands.filter(x => x.category == 'Infos').map((x) => '`' + x.name + '`').join(', ');
+            const staff_re = message.client.commands.filter(x => x.category == 'staff-re').map((x) => '`' + x.name + '`').join(', ');
 
             message.channel.send({
                 embed: {
@@ -18,7 +18,7 @@ module.exports = {
                     fields: [
                         { name: 'Bot', value: infos },
                         { name: 'Music', value: music },
-                        {name: 'Infos', value: infos },
+                        {name: 'Staff-re', value:staff_re },
                         { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
