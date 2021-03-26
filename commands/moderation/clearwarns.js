@@ -1,4 +1,4 @@
-const db = require('../../models/warns')
+const db = require('../../schemas/warns')
 
 module.exports = {
     name : 'clearwarn',

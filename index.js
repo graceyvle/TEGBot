@@ -12,6 +12,7 @@ client.config = require('./config/bot');
 client.emotes = client.config.emojis;
 client.filters = client.config.filters;
 client.commands = new discord.Collection();
+const Commando = require('discord.js-commando')
 
 
 // Dies ist der Code für die Mongo-DB-Verbindung
