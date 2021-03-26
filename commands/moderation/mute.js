@@ -11,7 +11,7 @@ module.exports = {
               var member = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
               if(!args[0]) return message.reply("Mention a member man")
               
-              let role = message.guild.roles.cache.find(role => role.name === "muted");
+              let role = message.guild.roles.cache.find(role => role.name === "MUTED");
               if(!role) return message.reply("Could not find the muted role")
 
 	   if(member.id === message.author.id) return message.channel.send('No just no you cannot mute your self.');
