@@ -10,4 +10,5 @@ module.exports = {
        message.channel.send("https://youtu.be/bwJ_E-I9WRs")
        message.channel.send("To figure out which key you need to use to boot to a usb, run the command `!bootkey`.")
 
-        });}}
+    }
+}
