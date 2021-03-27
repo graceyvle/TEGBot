@@ -4,33 +4,22 @@ module.exports = {
     category: 'Infos',
     utilisation: '{prefix}credit',
 
-
-
-    execute(client, message)  {
-
+    execute(client, message) {
         message.channel.send({
             embed: {
                 color: 'PURPLE',
                 author: { name: "credits" },
                 fields: [
-                    { name: 'moderation:', value: "devloped by: Patriot Zest "  },
-                    {name: `welcome`, value: "developed by: Patriot Zest"},
-                    {name: `suggestions`, value:  "devloped by:  Patriot Zest"},
-                    {name: `leveling`, value:  "devloped by:  Patriot Zest"},
-                    { name: 'Music:', value: "devloped by: Philipp "  },
-                    {name: `embed-messsages`, value: "devloped by: Philipp"},
-                    {name: `organizer`, value: "Benthetechguy"}
-                  
-
-                    
-                    
-                   
+                    {name: 'Moderation:', value: "Developed by: Patriot Zest "},
+                    {name: 'Welcome:', value: "Developed by: Patriot Zest"},
+                    {name: 'Suggestions:', value: "Developed by: Patriot Zest"},
+                    {name: 'Leveling:', value: "Developed by: Patriot Zest"},
+                    {name: 'Music:', value: "Developed by: Philipp"},
+                    {name: 'embed-messsages', value: "Developed by: Philipp"},
+                    {name: 'Support Team Information:', value: "Developed by: BenTheTechGuy"},
+                    {name: 'Project Organizer:', value: "BenTheTechGuy"}
                 ]
-
-            
             },
-
-
-
-
-        });}}
+        },
+    },
+};
