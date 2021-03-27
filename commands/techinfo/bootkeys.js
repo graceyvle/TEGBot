@@ -1,7 +1,7 @@
 module.exports = {
     name: 'bootkeys',
     aliases: ['bootkey'],
-    category: 'TechInfo',
+    category: 'spteam-commands',
     utilisation: '{prefix}bootkeys',
 
     execute(client, message) {

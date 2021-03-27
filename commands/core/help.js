@@ -9,6 +9,7 @@ module.exports = {
             const infos = message.client.commands.filter(x => x.category == 'Infos').map((x) => '`' + x.name + '`').join(', ');
             const music = message.client.commands.filter(x => x.category == 'Music').map((x) => '`' + x.name + '`').join(', ');
             const staff_re = message.client.commands.filter(x => x.category == 'staff-re').map((x) => '`' + x.name + '`').join(', ');
+            const spteam_commands = message.client.commands.filter(x => x.category == 'spteam-commands').map((x) => '`' + x.name + '`').join(', ');
 
             message.channel.send({
                 embed: {
@@ -16,9 +17,10 @@ module.exports = {
                     author: { name: 'Help pannel' },
                     footer: { text: 'ready as always' },
                     fields: [
-                        { name: 'Bot', value: infos },
+                        { name: 'Infos', value: infos },
                         { name: 'Music', value: music },
                         {name: 'Staff-re', value:staff_re },
+                        {name: 'spteam-commands', value:spteam_commands },
                         { name: 'Filters', value: client.filters.map((x) => '`' + x + '`').join(', ') },
                     ],
                     timestamp: new Date(),
