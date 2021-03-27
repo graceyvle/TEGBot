@@ -14,7 +14,6 @@ client.filters = client.config.filters;
 client.commands = new discord.Collection();
 const Commando = require('discord.js-commando')
 
-
 // Dies ist der Code für die Mongo-DB-Verbindung
 mongoose.connect('mongodb+srv://PatriotZest:techwayempire@techempiregermany.gp4jq.mongodb.net/Data',{
          useUnifiedTopology : true,
@@ -31,6 +30,34 @@ fs.readdirSync('./commands').forEach(dirs => {
         client.commands.set(command.name.toLowerCase(), command);
     };
 });
+
+
+
+client.on('guildMemberAdd', member => {
+	let embed = new discord.MessageEmbed()
+		.setTitle(`Member Joined`)
+		.setDescription(`${member.user.tag} has joined TechEmpireGermany!`)
+		.setThumbnail(member.user.displayAvatarURL())
+		.setColor("GREEN")
+		.setTimestamp()
+		member.guild.channels.cache.get('824060103119470622').send(embed)
+	let userembed = new discord.MessageEmbed()
+		.setTitle(`Welcome to TechEmpireGermany!`)
+		.setDescription(`Check out the rules channel and enjoy your stay! 😀`)
+		.setColor("ORANGE")
+		member.send(userembed);
+})
+
+client.on('guildMemberRemove', (member) => {
+	let embed = new discord.MessageEmbed()
+		.setTitle(`Member Left`)
+		.setDescription(`${member.user.tag} has left TechEmpireGermany`)
+		.setThumbnail(member.user.displayAvatarURL())
+		.setColor("RED")
+		.setTimestamp()
+		client.channels.cache.get('824321468279947275').send(embed)
+})
+
 
 const events = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 const player = fs.readdirSync('./player').filter(file => file.endsWith('.js'));
