@@ -22,6 +22,4 @@ module.exports = {
 					{name: 'Other Common Ones:', value: "F2, F10, F12, Esc, Del"}
                 ]
             },
-        },
-    },
-};
+        });}}

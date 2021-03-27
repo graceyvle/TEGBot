@@ -20,6 +20,4 @@ module.exports = {
                     {name: 'Project Organizer:', value: "BenTheTechGuy"}
                 ]
             },
-        },
-    },
-};
+        });}}
