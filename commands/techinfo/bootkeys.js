@@ -1,10 +1,15 @@
 module.exports = {
-    name: 'bootkeys',
-    aliases: ['bootkey'],
+    name: 'windows-setup',
+    aliases: ['ws'],
     category: 'spteam-commands',
-    utilisation: '{prefix}bootkeys',
+    utilisation: '{prefix}windows-setup',
 
     execute(client, message) {
+       
+       message.channel.send("this tutorial will lead you how to do a fresh windows installation:  (all your data will be gone back it up and use *!key* in case you need to back you need to backing you need to backing up your registration key too)");
+ 
+       message.channel.send("https://youtu.be/EjzPG3SdtJs")
+       
         message.channel.send({
             embed: {
                 color: 'BLUE',
@@ -23,3 +28,5 @@ module.exports = {
                 ]
             },
         });}}
+
+
