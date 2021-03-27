@@ -8,7 +8,7 @@ module.exports = {
        
        message.channel.send("this tutorial will lead you how to do a fresh windows installation:  (all your data will be gone back it up and use *!key* in case you need to back you need to backing you need to backing up your registration key too)");
  
-       message.channel.send("https://youtu.be/EjzPG3SdtJs")
+       message.channel.send("https://youtu.be/bwJ_E-I9WRs")
        
         message.channel.send({
             embed: {
