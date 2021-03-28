@@ -8,7 +8,7 @@ module.exports = {
 	if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send("I dont have the perms to ban");
 
 	let reason = args.slice(1).join(" ")
-	const mentioned = message.mentions.members.first();
+	const mentioned = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
 	if(!reason) reason = "Unspecified";
 	if(!args[0]) return message.channel.send("You must specify a person to ban")
