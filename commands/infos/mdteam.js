@@ -15,8 +15,11 @@ module.exports = {
                 fields: [
                     { name: 'self-promo:', value: "if someone does self promo on the server or DM´s your Job is to ping people who can ban and warn/mute them!"  },
                     { name: 'corruption:', value: "if someone in the staff team does things he shouldn´t do let the owners know about that"  },
-                    {name: `piracy`, value : "someone who ask for help with cracked and illegal stuff have to be banned and if needed muted!"},
-                    {name: `activity`, value: "if you have a valid reason to be inactive we accept that otherwhise you have to be active atleast once per week!"}
+                    {name: `rules`, value : "You should know when to warn, mute and ask senior staff members to ban."},
+                    {name: `activity`, value: "Must be active 6-7 times a week."},
+                    {name: `DC-experience`, value: "You must have a discord account older than 4-5 months."},
+                    {name: `non-escalation` , value: "Know how to defuse heated situations in a quick and efficient manner."}
+
 
 
                   
