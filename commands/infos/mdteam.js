@@ -10,7 +10,7 @@ module.exports = {
 
         message.channel.send({
             embed: {
-                color: 'BLUE',
+                color: 'YELLOW',
                 author: { name: "mod-requirements" },
                 fields: [
                     { name: 'self-promo:', value: "if someone does self promo on the server or DM´s your Job is to ping people who can ban and warn/mute them!"  },
