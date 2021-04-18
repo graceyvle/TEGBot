@@ -25,7 +25,7 @@ module.exports = {
                  }
                   member.roles.add(role.id)
                   const mutembed = new Discord.MessageEmbed()
-        		.setTitle('Member muted')
+        		.setTitle('Muted')
         		.setThumbnail(member.user.displayAvatarURL())
        		.addField('User muted', member)
         		.addField('Muted by', message.author)

@@ -16,7 +16,7 @@ module.exports = {
 	if(!mentioned.bannable) return message.channel.send("That user has a role which is above my role or is a mod/admin");
 
 	const embed = new Discord.MessageEmbed()
-	.setTitle('User Banned')
+	.setTitle('Banned')
 	.setThumbnail(mentioned.user.displayAvatarURL())
 	.addField('User banned', mentioned)
 	.addField('Banned by', message.author)

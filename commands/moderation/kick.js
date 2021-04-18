@@ -28,7 +28,7 @@ module.exports = {
         })
 
         const kickembed = new Discord.MessageEmbed()
-        .setTitle('Member Kicked')
+        .setTitle('Kicked')
         .setThumbnail(member.user.displayAvatarURL())
         .addField('User Kicked', member)
         .addField('Kicked by', message.author)
