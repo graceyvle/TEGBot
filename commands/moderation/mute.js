@@ -25,7 +25,7 @@ module.exports = {
                  }
                   member.roles.add(role.id)
                   const mutembed = new Discord.MessageEmbed()
-        		.setTitle('Member muted')
+        		.setTitle('Muted')
         		.setThumbnail(member.user.displayAvatarURL())
        		.addField('User muted', member)
 		.addField('User ID', member.id)
@@ -41,7 +41,7 @@ module.exports = {
 	setTimeout( function() {
                member.roles.remove(role.id);
                const unmutembed = new Discord.MessageEmbed()
-        		.setTitle('Member unmuted')
+        		.setTitle('Unmuted')
         		.setThumbnail(member.user.displayAvatarURL())
        		.addField('User unmuted', member)
         		.addField('Muted by', message.author)

@@ -33,7 +33,7 @@ module.exports = {
             data.save()
         });
         user.send(new MessageEmbed()
-            .setTitle('Member Warned')
+            .setTitle('Warning')
         	  .setThumbnail(user.user.displayAvatarURL())
        	  .addField('User warned', user)
         	  .addField('Warned by', message.author)
@@ -44,7 +44,7 @@ module.exports = {
         )
         message.react("✅")
         client.channels.cache.get(`824194262279127060`).send(new MessageEmbed()
-        .setTitle('Member Warned')
+        .setTitle('Warning')
         .setThumbnail(user.user.displayAvatarURL())
         .addField('User warned', user)
         .addField('User ID', user.id)
