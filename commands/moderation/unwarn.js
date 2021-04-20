@@ -14,7 +14,7 @@ module.exports = {
                 data.content.splice(number, 1)
 	      message.react("✅")
                 client.channels.cache.get(`824194262279127060`).send(new MessageEmbed()
-                .setTitle('Unwarned')
+                .setTitle('Member Unwarned')
         	      .setThumbnail(user.user.displayAvatarURL())
         	      .addField('User unwarned', user)
         	      .addField('Unwarned by', message.author)

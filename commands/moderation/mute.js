@@ -11,7 +11,7 @@ module.exports = {
               var member = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[0]));
               if(!args[0]) return message.reply("Mention a member man")
               
-              let role = message.guild.roles.cache.find(role => role.name === "MUTED");
+              let role = message.guild.roles.cache.find(role => role.name === "muted");
               if(!role) return message.reply("Could not find the muted role")
 
 	   if(member.id === message.author.id) return message.channel.send('No just no you cannot mute your self.');
@@ -25,16 +25,17 @@ module.exports = {
                  }
                   member.roles.add(role.id)
                   const mutembed = new Discord.MessageEmbed()
-        		.setTitle('Muted')
+        		.setTitle('Member muted')
         		.setThumbnail(member.user.displayAvatarURL())
        		.addField('User muted', member)
+		.addField('User ID', member.id)
         		.addField('Muted by', message.author)
         		.addField('Reason', reason)
 		.addField('Muted for', time)
         		.setFooter('Time muted', client.user.displayAvatarURL())
         		.setTimestamp()
                    message.react("✅")
-                   client.channels.cache.get(`824194262279127060`).send(mutembed)
+                   client.channels.cache.get(`824600443718991952`).send(mutembed)
      	         member.send(mutembed);
 
 	setTimeout( function() {
@@ -45,7 +46,7 @@ module.exports = {
        		.addField('User unmuted', member)
         		.addField('Muted by', message.author)
         		.addField('Reason', reason)
-		client.channels.cache.get(`824194262279127060`).send(unmutembed)
+		client.channels.cache.get(`824600443718991952`).send(unmutembed)
           }, ms(time));
 } else{
      return message.channel.send("nothing here");

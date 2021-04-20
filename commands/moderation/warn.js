@@ -33,7 +33,7 @@ module.exports = {
             data.save()
         });
         user.send(new MessageEmbed()
-            .setTitle('Warning')
+            .setTitle('Member Warned')
         	  .setThumbnail(user.user.displayAvatarURL())
        	  .addField('User warned', user)
         	  .addField('Warned by', message.author)
@@ -47,6 +47,7 @@ module.exports = {
         .setTitle('Member Warned')
         .setThumbnail(user.user.displayAvatarURL())
         .addField('User warned', user)
+        .addField('User ID', user.id)
         .addField('Warned by', message.author)
         .addField('Reason', reason)
         .setFooter('Time warned', client.user.displayAvatarURL())
