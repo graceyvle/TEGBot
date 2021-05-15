@@ -29,6 +29,9 @@ module.exports = {
     } else {
         displayRoles = roles.slice(20).join(' ')
     }
+
+
+    message.delete();
      
      const userEmbed = new Discord.MessageEmbed()
      .setTitle(`User Information for ${mentionedMember.user.username}`)

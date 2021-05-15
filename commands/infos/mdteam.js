@@ -8,6 +8,8 @@ module.exports = {
 
     execute(client, message)  {
 
+        message.delete();
+
         message.channel.send({
             embed: {
                 color: 'YELLOW',

@@ -5,6 +5,9 @@ module.exports = {
     utilisation: '{prefix}credit',
 
     execute(client, message) {
+        
+        message.delete();
+        
         message.channel.send({
             embed: {
                 color: 'PURPLE',
