@@ -5,6 +5,9 @@ module.exports = {
     utilisation: '{prefix}bootkeys',
 
     execute(client, message) {
+
+        message.delete();
+
         message.channel.send({
             embed: {
                 color: 'BLUE',

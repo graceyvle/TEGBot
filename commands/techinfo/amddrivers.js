@@ -6,6 +6,8 @@ module.exports = {
 
     execute(client, message) {
 
+        message.delete();
+
         message.channel.send("https://www.amd.com/en/support");
 
 
