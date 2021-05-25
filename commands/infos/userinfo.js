@@ -46,8 +46,10 @@ module.exports = {
      .addField("Joined the server at:", `${moment(mentionedMember.joinedAt).format("DD-MM-YYYY [at] HH:mm")}`)
      .addField(`Roles: [${roles.length}]`, `${displayRoles}`)
      
-     message.delete();
+     
 
      message.channel.send(userEmbed).catch(err => console.log(err));
-     }
+     
+     message.delete();
+    }
      }
