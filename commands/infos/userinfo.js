@@ -50,6 +50,6 @@ module.exports = {
 
      message.channel.send(userEmbed).catch(err => console.log(err));
      
-     message.delete();
+     
     }
      }
