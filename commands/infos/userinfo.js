@@ -31,7 +31,7 @@ module.exports = {
     }
 
 
-    message.delete();
+   
      
      const userEmbed = new Discord.MessageEmbed()
      .setTitle(`User Information for ${mentionedMember.user.username}`)
@@ -45,6 +45,8 @@ module.exports = {
      .addField("Account created:", `${moment(mentionedMember.createdAt).format("DD-MM-YYYY [at] HH:mm")}`)
      .addField("Joined the server at:", `${moment(mentionedMember.joinedAt).format("DD-MM-YYYY [at] HH:mm")}`)
      .addField(`Roles: [${roles.length}]`, `${displayRoles}`)
+     
+     message.delete();
 
      message.channel.send(userEmbed).catch(err => console.log(err));
      }
