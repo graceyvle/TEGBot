@@ -20,7 +20,8 @@ module.exports = {
                     {name: `rules`, value : "You should know when to warn, mute and ask senior staff members to ban."},
                     {name: `activity`, value: "Must be active 6-7 times a week."},
                     {name: `DC-experience`, value: "You must have a discord account older than 4-5 months."},
-                    {name: `non-escalation` , value: "Know how to defuse heated situations in a quick and efficient manner."}
+                    {name: `non-escalation` , value: "Know how to defuse heated situations in a quick and efficient manner."},
+                    {name: `Server-Experience`, value: "You must be atleast 1week-1month on the Server." }
 
 
 
