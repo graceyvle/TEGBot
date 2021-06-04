@@ -5,6 +5,8 @@ const client = new discord.Client({ disableMentions: 'everyone' });
 
 const { Player } = require('discord-player');
 
+const { swears }  = require('./swears.json');
+
 // Mongo db hier definieren
 const mongoose = require('mongoose')
 const customschema = require('./schemas/custom-commands')
@@ -31,6 +33,42 @@ fs.readdirSync('./commands').forEach(dirs => {
         client.commands.set(command.name.toLowerCase(), command);
     };
 });
+
+
+// anti swear part
+client.on('message', async message => {
+	let yes = false;
+   
+    var i;
+    for(i = 0;i < swears.length; i++) {
+      if(message.content.toLowerCase().includes(swears[i].toLowerCase()))
+        yes = true; 
+    }
+	if(yes){
+		message.delete()
+		let yesembed = new discord.MessageEmbed()
+			.setTitle('Swear')
+			.setThumbnail(message.author.displayAvatarURL())
+			.addField('Swore by', message.author.tag)
+			.addField('User ID', message.author.id)
+			.addField('Message deleted', message.content)
+			.setFooter('Time deleted', client.user.displayAvatarURL())
+			.setTimestamp()
+		let userembed = new discord.MessageEmbed()
+			.setTitle('Swear')
+			.setThumbnail(message.author.displayAvatarURL())
+			.setDescription("TEG is a pg friendly server, you cannot swear here")
+			.addField('Message deleted', message.content)
+			.setFooter('Time deleted', client.user.displayAvatarURL())
+			.setTimestamp()
+		client.channels.cache.get(`835519322909573190`).send(yesembed)
+		message.author.send(userembed)
+	}
+})
+
+
+
+
 
 
 
