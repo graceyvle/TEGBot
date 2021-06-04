@@ -14,7 +14,7 @@ module.exports = {
         message.channel.send({
             embed: {
                 color: 'GREEN',
-                author: { name: "rules" },
+                author: { name: "Rules" },
                 fields: [
                     { name: '#1:', value: " Be respectful to our Support Team, they provide advice/help voluntarily during their own time."  },
                     { name: '#2:', value: "We do not tolerate profanity at all. This server must be kept SFW for all members included."  },
